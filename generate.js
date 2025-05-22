@@ -14,7 +14,7 @@ for (const pkg of config.packages) {
   out.packages[pkg.name] = {
     versions: {
       [version]: {
-        url: `${pkg.repo}#${pkg.version}`,
+        url: `${pkg.repo}/archive/refs/tags/${pkg.version}.zip`,
         unity: pkg.unity,
         "vpm-dependencies": {}
       }

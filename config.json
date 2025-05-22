@@ -6,8 +6,8 @@
   "packages": [
     {
       "name": "com.momoma.genelit",
-      "repo": "https://github.com/momoma-null/GeneLit.git",
-      "version": "v1.0.7",
+      "repo": "https://github.com/momoma-null/GeneLit",
+      "version": "ver1.0.7",
       "unity": "2022.3"
     }
   ]
