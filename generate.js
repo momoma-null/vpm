@@ -1,9 +1,10 @@
-// generate.js
 const fs = require("fs");
 const config = require("./config.json");
 
 const out = {
   name: config.name,
+  author: config.author,
+  url: config.url,
   packages: {}
 };
 

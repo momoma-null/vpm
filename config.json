@@ -1,5 +1,7 @@
 {
   "name": "Momoma Assets",
+  "author": "momoma",
+  "url": "https://momoma-null.github.io/vpm/packages.vpm.json",
   "packages": [
     {
       "name": "com.momoma.genelit",
