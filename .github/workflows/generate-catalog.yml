@@ -1,0 +1,48 @@
+name: Generate VPM Catalog
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Generate packages.vpm.json
+        run: |
+          mkdir -p output
+          node <<EOF
+          const fs = require("fs");
+          const config = require("./config.json");
+          const out = {
+            name: config.name,
+            packages: {}
+          };
+          for (const pkg of config.packages) {
+            const version = pkg.version.replace(/^v/, '');
+            out.packages[pkg.name] = {
+              versions: {
+                [version]: {
+                  url: \`\${pkg.repo}#\${pkg.version}\`,
+                  unity: pkg.unity,
+                  "vpm-dependencies": {}
+                }
+              }
+            };
+          }
+          fs.writeFileSync("output/packages.vpm.json", JSON.stringify(out, null, 2));
+EOF
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          publish_branch: gh-pages
