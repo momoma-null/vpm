@@ -5,6 +5,7 @@ const out = {
   name: config.name,
   author: config.author,
   url: config.url,
+  id: config.id,
   packages: {}
 };
 
