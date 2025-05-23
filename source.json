@@ -1,0 +1,19 @@
+{
+  "name": "Momoma Assets",
+  "id": "com.momoma.vpm",
+  "url": "https://momoma-null.github.io/vpm/index.json",
+  "author": {
+    "name": "momoma",
+    "url": "https://momoma-voidtech.amebaownd.com/"
+  },
+  "description": "momoma's vpm repository",
+  "infoLink": {
+    "url": "https://github.com/momoma-null/vpm",
+    "text": "View on GitHub"
+  },
+  "bannerUrl": "banner.png",
+  "githubRepos": [
+    "momoma-null/GeneLit"
+  ],
+  "packages": []
+}
