@@ -13,7 +13,8 @@
   },
   "bannerUrl": "banner.png",
   "githubRepos": [
-    "momoma-null/GeneLit"
+    "momoma-null/GeneLit",
+    "momoma-null/MomomaTools"
   ],
   "packages": []
 }
