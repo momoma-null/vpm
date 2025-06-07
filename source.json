@@ -14,7 +14,8 @@
   "bannerUrl": "banner.png",
   "githubRepos": [
     "momoma-null/GeneLit",
-    "momoma-null/MomomaTools"
+    "momoma-null/MomomaTools",
+    "momoma-null/MomomaShaders"
   ],
   "packages": []
 }
